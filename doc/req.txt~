@@ -1,0 +1,16 @@
+1)run a network discover and list all monitorable ips classified to device types
+	*run discovery with basic credentials provided to the system (admin credentials)
+	*runs discovery with the specific credentials provided to the system
+2)have seperate agents monitor device types
+	*agents : wmi,ssh,snmp,url
+	*fetch info from all managed devices at regular interval for inmemory processing and historical analysys
+3)conigure threshold for each devices/devicetype/device groups (thresholds defers with category)
+	* incident,alert generation
+4)ITIL informations - generate alerts based on the itil informations as well
+5)usage monitoring for end users 
+	*take screen shots of the desktop at regular intervals and monitors fraduent usage
+	*monitors and blocks url
+ 
+	
+	
+
