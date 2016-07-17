@@ -1,8 +1,14 @@
 package com.forsfortis.util.credentials;
 
+import java.io.Serializable;
+
 import com.forsfortis.util.DeviceType;
 
-public class Credentials {
+public class Credentials implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String userName;
 	private String password;

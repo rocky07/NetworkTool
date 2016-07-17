@@ -1,8 +1,14 @@
 package com.forsfortis.util;
 
+import java.io.Serializable;
+
 import com.forsfortis.util.credentials.Credentials;
 
-public class NetworkObject {
+public class NetworkObject implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String objectIp;
 	private String objectName;
 	private String subnet;

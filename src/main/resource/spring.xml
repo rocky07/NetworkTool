@@ -17,8 +17,14 @@
 <bean id="credentailsDAO" class="com.forsfortis.dao.impl.CredentialsDaoImpl">
     <constructor-arg name="mongoOps" ref="mongoTemplate"/>
 </bean>
+<bean id="objectInfoDAO" class="com.forsfortis.dao.impl.ObjectInfoDaoImpl">
+    <constructor-arg name="mongoOps" ref="mongoTemplate"/>
+</bean>
 <!-- services -->
 <bean id="credentialService" class="com.forsfortis.service.dbservice.CredentialService">
 	<property name="credentailsDAO" ref="credentailsDAO"/>
+</bean>
+<bean id="objectInfoService" class="com.forsfortis.service.dbservice.ObjectInfoService">
+	<property name="objectInfoDAO" ref="objectInfoDAO"/>
 </bean>
 </beans>

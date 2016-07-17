@@ -3,11 +3,8 @@ package com.forsfortis.dao.impl;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 import com.forsfortis.dao.CredentialsDAO;
-import com.forsfortis.util.DeviceType;
 import com.forsfortis.util.credentials.Credentials;
 
 public class CredentialsDaoImpl implements CredentialsDAO {
@@ -28,5 +25,4 @@ public class CredentialsDaoImpl implements CredentialsDAO {
 		//Query query = new Query(Criteria.where("deviceType").is(deviceType));
         return this.mongoOps.findAll(Credentials.class, CREDENTIALS_COLLECTION);
 	}
-
 }

@@ -22,8 +22,10 @@ public class ManagementService {
     @Path("startagent")
 	 @Produces(MediaType.APPLICATION_JSON)
 	public Response startAgent(){
-		//TODO load saved network objects to Object cache			
-	    new AgentManager().startAgents();	
+		//TODO load saved network objects to Object cache
+		AgentManager agentManager = new AgentManager();
+		agentManager.startAgents();
+		agentManager.initMessagingSubscribers();
 	return Response.status(200).entity("Agent started").build();
 	}
 	

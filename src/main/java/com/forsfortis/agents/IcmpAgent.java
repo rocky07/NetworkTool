@@ -4,7 +4,11 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
 
+import com.forsfortis.messages.MsgPublisher;
+import com.forsfortis.messages.MsgSubscriber;
+import com.forsfortis.util.ApplicationConstants;
 import com.forsfortis.util.DeviceType;
+import com.forsfortis.util.IcmpObjectInfo;
 import com.forsfortis.util.NetworkObject;
 import com.forsfortis.util.NetworkToolException;
 import com.forsfortis.util.NetworkToolExceptionConstants;
@@ -36,10 +40,12 @@ public class IcmpAgent extends Agent {
 			int timeOut=2000;
 			boolean reachable = InetAddress.getByName(networkObject.getObjectIp()).isReachable(timeOut);
 			System.out.println(networkObject.getObjectIp()+" : is reachable="+reachable);
+			IcmpObjectInfo icmpObjectInfo = new IcmpObjectInfo(networkObject);
+			icmpObjectInfo.setAlive(reachable);
+			AgentManager.getPublisher().sendMessage(icmpObjectInfo);
 		}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
 	}
 }

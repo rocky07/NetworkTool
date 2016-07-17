@@ -15,6 +15,7 @@
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
+		<activemq.version>5.10.0</activemq.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -87,8 +88,14 @@
             <version>${logback.version}</version>
             <scope>runtime</scope>
         </dependency>
+        
 
 		<!-- end: spring mongodb integration -->
-
+		<!--  active MQ -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -4,7 +4,6 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-
 import com.forsfortis.service.ManagementService;
 
 /**
@@ -25,7 +24,6 @@ public class App
         http.setIdleTimeout(30000);
         server.addConnector(http);
         server.setHandler(context);
-
         ServletHolder jerseyServlet = context.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
         jerseyServlet.setInitOrder(0);
         jerseyServlet.setInitParameter("jersey.config.server.provider.classnames",ManagementService.class.getCanonicalName());

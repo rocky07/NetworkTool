@@ -8,6 +8,7 @@ import com.forsfortis.util.credentials.Credentials;
 
 public class CredentialService {                                                                                                           
 	CredentialsDAO credentailsDAO;
+	
 	public CredentialService(){
 	}
 	

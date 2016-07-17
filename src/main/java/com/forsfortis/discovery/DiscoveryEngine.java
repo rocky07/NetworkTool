@@ -12,7 +12,7 @@ import com.forsfortis.util.NetworkObject;
 
 public final class DiscoveryEngine implements Runnable {
 	private static final int timeout=1000;
-	private static final String subnet="192.168.1";
+	private static final String subnet="192.168.0";
 	private static boolean isDiscoveryStarter=false;
 	private String host;
 	
