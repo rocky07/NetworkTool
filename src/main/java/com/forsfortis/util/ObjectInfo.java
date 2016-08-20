@@ -11,6 +11,7 @@ public class ObjectInfo implements Serializable{
 	private NetworkObject networkObject;
 	private boolean alive;
 	private DeviceType deviceType;
+	
 	ObjectInfo(NetworkObject networkObject,DeviceType deviceType){
 		this.networkObject=networkObject;
 		this.deviceType=deviceType;

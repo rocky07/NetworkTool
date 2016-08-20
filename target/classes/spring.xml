@@ -20,11 +20,18 @@
 <bean id="objectInfoDAO" class="com.forsfortis.dao.impl.ObjectInfoDaoImpl">
     <constructor-arg name="mongoOps" ref="mongoTemplate"/>
 </bean>
+<bean id="discoveryDAO" class="com.forsfortis.dao.impl.DiscoveryDaoImpl">
+    <constructor-arg name="mongoOps" ref="mongoTemplate"/>
+</bean>
 <!-- services -->
 <bean id="credentialService" class="com.forsfortis.service.dbservice.CredentialService">
 	<property name="credentailsDAO" ref="credentailsDAO"/>
 </bean>
 <bean id="objectInfoService" class="com.forsfortis.service.dbservice.ObjectInfoService">
 	<property name="objectInfoDAO" ref="objectInfoDAO"/>
+</bean>
+
+<bean id="discoveryService" class="com.forsfortis.service.dbservice.DiscoveryService">
+	<property name="discoveryDAO" ref="discoveryDAO"/>
 </bean>
 </beans>

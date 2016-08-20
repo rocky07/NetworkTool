@@ -53,8 +53,10 @@ public class AgentManager{
 	
 	public void initMessagingSubscribers(){
 		try{
-			MsgSubscriber subscriber=new MsgSubscriber();
-			subscriber.create(ApplicationConstants.APPLICATION_SUBSCRIBER_CLIENT_ID, ApplicationConstants.DB_PERSISTANCE_TOPIC);
+			MsgSubscriber subscriberDB=new MsgSubscriber();
+			subscriberDB.create(ApplicationConstants.APPLICATION_DB_SUBSCRIBER_CLIENT_ID, ApplicationConstants.DB_PERSISTANCE_TOPIC);
+			MsgSubscriber subscriberMem=new MsgSubscriber();
+			subscriberMem.create(ApplicationConstants.APPLICATION_INMEMORY_SUBSCRIBER_CLIENT_ID, ApplicationConstants.DB_PERSISTANCE_TOPIC);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

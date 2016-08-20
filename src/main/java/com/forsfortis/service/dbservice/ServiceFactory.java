@@ -24,4 +24,8 @@ public class ServiceFactory {
 	public ObjectInfoService getObjectInfoService() {
 		return ctx.getBean("objectInfoService", ObjectInfoService.class);
 	}
+	
+	public DiscoveryService getDiscoveryService() {
+		return ctx.getBean("discoveryService", DiscoveryService.class);
+	}
 }
