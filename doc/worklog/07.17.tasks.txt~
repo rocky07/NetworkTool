@@ -1,0 +1,10 @@
+persist discovered objects to the db, populate the cache 
+	starting a new discovery shold clear the cache and have the new objects in it
+	discovery process should end with clearing the existsing data from database and have new data in them
+	preload the database object values into the cache
+	
+lists out configurable thresholds for objects and associate them with objects
+create a new subscriber for in memory processing of object info
+discovery status >> start new discovery only if the existing one is complete
+messgage subscriber for inmemory processing of objects >> compare thresholds and generate incidents
+
